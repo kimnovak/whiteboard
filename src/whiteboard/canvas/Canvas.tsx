@@ -1,10 +1,12 @@
+import CanvasImage from "../elements/CanvasImage/CanvasImage";
+import Drawing from "../elements/Drawing/Drawing";
 import CanvasElement from "../elements/Element";
 import { TODOElement } from "../elements/types";
 import useCurrentElement from "../hooks/useCurrentElement";
 
 const Canvas = () => {
   //const element: TODOElement = useCurrentElement();
-  const element = new CanvasElement();
+  const element: any = new CanvasImage();
 
   return (
     <div>
@@ -15,9 +17,9 @@ const Canvas = () => {
         }}
         width={500}
         height={500}
-        onMouseDown={(e) => element.beginDrawing(e)}
-        onMouseUp={(e) => element.endDrawing(e)}
-        onMouseMove={(e) => element.draw(e)}
+        onMouseDown={(e) => element.onMouseDown(e)}
+        onMouseUp={(e) => element.onMouseUp(e)}
+        onMouseMove={(e) => element.onMouseMove(e)}
       />
     </div>
   );

@@ -1,4 +1,5 @@
 export type TODOElement = {
-    beginDrawing: () => void;
-    endDrawing: () => void;
+    onMouseDown: (e: any) => void;
+    onMouseUp: (e: any) => void;
+    onMouseMove: (e: any) => void;
 }
